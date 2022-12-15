@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fileupload.css">
+</head>
+
+
+<body class="bg-primary">
+    <!-- <div style=" ">
+        <form action="index.php" method="post">
+            USERNAME:<input type="text" name="user"> <br>    
+            EMAIL:<input type="email" name="email" ><br>
+            PASSWORD: <input type="password" name="pass"><br>
+            <input type="submit" name="btn" value="submit" style="background-color: red;">
+        </form>     
+     
+    </div> -->
+    <!-- 
+    <div class="conatiner">
+        <div class="row">
+            <div class="modal fade" id="exampleModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-start">
+                            <form action="index.php" method="post" enctype="multipart/form-data">
+                                <div class="col mt-5"> 
+                                    <label>File Name:</label><input type="text" name="" id=""><br>
+                                    <label>FILE UPLOAD</label><input type="file" name="files" class="" style="background-color: aqua; text-align: end;"><br>
+                                </div>
+        
+        
+                               <label for="">File Type</label> <div class="form-check form-check-inline">
+        
+                                    <input class="form-check-input" type="radio" name="FileType" id="inlineRadio1" value="pdf">
+                                    <label class="form-check-label" for="inlineRadio1">pdf</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="FileType" id="inlineRadio2" value="jpg">
+                                    <label class="form-check-label" for="inlineRadio2">jpg</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="FileType" id="inlineRadio2" value="xlsx">
+                                    <label class="form-check-label" for="inlineRadio2">xlsx</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="FileType" id="inlineRadio2" value="txt">
+                                    <label class="form-check-label" for="inlineRadio2">txt</label>
+                                </div><br>
+                                <input type="submit" value="upload" name="upload">
+                            </form>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bg-light">
+                <div class="bg-primary text-center ">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<button class="dropdown-item" href="#" type="button" class="btn btn-primary"
+data-bs-toggle="modal" data-bs-target="#exampleModal">click</button> -->
+
+    <div class="wrapper">
+        <div class="container con">
+            <h1>Upload a file</h1>
+            <div class="upload-container  upload-con">
+                <div class="border-container border-con text-start">
+                    <div class="icons fa-4x">
+                        <i class="fas fa-file-image" data-fa-transform="shrink-3 down-2 left-6 rotate--45"></i>
+                        <i class="fas fa-file-alt" data-fa-transform="shrink-2 up-4"></i>
+                        <i class="fas fa-file-pdf" data-fa-transform="shrink-3 down-2 right-6 rotate-45"></i>
+                    </div>
+                    <!--<input type="file" id="file-upload">-->
+                    <form action="index.php" method="post" enctype="multipart/form-data">
+                        <div class="col -">
+                            <label>File Name:</label><input type="text" name="" class="px-5"
+                                style="margin-left:40px ;"><br>
+                        </div>
+
+
+                        <label for="">File Type</label>
+                        <div class="form-check form-check-inline px-5 mt-2" style="margin-left:30px ;">
+
+                            <input class="form-check-input" type="radio" name="FileType" id="inlineRadio1" value="pdf">
+                            <label class="form-check-label" for="inlineRadio1">pdf</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="FileType" id="inlineRadio2" value="jpg">
+                            <label class="form-check-label" for="inlineRadio2">jpg</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="FileType" id="inlineRadio2" value="xlsx">
+                            <label class="form-check-label" for="inlineRadio2">xlsx</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="FileType" id="inlineRadio2" value="txt">
+                            <label class="form-check-label" for="inlineRadio2">txt</label>
+                        </div><br>
+                        <label>File Upload</label><input type="file" name="files" class="c"><br>
+                        <div class="col text-center mt-3">
+                            <input type="submit" value="upload" name="upload">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+    <script src="../bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<?php
+
+
+// if(isset($_POST['btn']))
+// {
+//     display($_POST['user'],$_POST['pass'],$_POST['email']);
+// }
+// function display($u,$p,$e)
+// {
+//     include 'db.php';
+//     $insert=mysqli_query($connect,"insert into regform values('$u','$p','$e')");
+//     if($insert)
+//     {
+//         echo "inserted";
+//         echo '<script>window.location.href="login.php";alert("successfully Register");</script>';
+         // header("location:login.php");
+//     }
+//     else
+//     {
+//         echo "not ins";
+//     }
+// }
+
+
+<!-- 
+if(isset($_POST['upload'])){
+  
+    echo $_FILES['files']['name'];
+  
+    $target_folder="../upload/";
+  
+    $target_name=$target_folder.basename($_FILES['files']['name']);
+  
+    $imageFileType = strtolower(pathinfo($target_name,PATHINFO_EXTENSION));
+  
+    echo $imageFileType;
+
+    // file type check
+    if($imageFileType==$_POST['FileType'])
+    {
+        echo "ok";
+        // echo $_POST['pdf'];
+    }
+    else
+    {
+        echo "only xlsx file is allowed";
+    } -->
+
+    // file exist check
+    // if(file_exists($target_name))
+    // {
+    //     echo "file already exists";
+    // }
+    // else
+    // {
+// file move to next folder
+    //     if(move_uploaded_file($_FILES['files']['tmp_name'], $target_name)) {  
+    //         echo "File uploaded successfully!";  
+    //     } else{  
+    //         echo "Sorry, file not uploaded, please try again!";  
+    //     } 
+    // }
+     
+<!-- } -->
+?>
